@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
-function InputControl() {
+import styles from "./InputControl.module.css";
+
+function InputControl(props) {
   return (
-    <div>InputControl</div>
-  )
+    <div className={styles.container}>
+      {props.label && <label>{props.label}</label>}
+      <input type="text" {...props} />
+    </div>
+  );
 }
 
-export default InputControl
+export default InputControl;
